@@ -1,0 +1,70 @@
+<header class="navbar">
+
+  <!-- MARCA -->
+  <div class="brand">
+
+    <!-- <div class="brand-icon">
+      ⛰️
+    </div> -->
+
+    <div class="brand-text">
+      <a href="/">
+      <h1>HATUN YACHAY</h1> 
+      <span>Colegio Ntra. Sra. de Alta Gracia - Ayaviri</span>
+    </a>
+    </div>
+
+  </div>
+
+
+  <!-- MENÚ PRINCIPAL -->
+  <nav class="main-nav">
+
+    <a
+      routerLink="/inicio"
+      routerLinkActive="active">
+      
+      Explorar
+    </a>
+
+    <a
+      routerLink="/videos"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }">
+      
+      Videos
+    </a> 
+
+  </nav>
+
+
+  <!-- ACCIONES -->
+  <div class="navbar-actions">
+
+    <a
+      
+      routerLink="/administrar-lugares"
+      class="admin-button">
+
+      ⚙️
+      <span>Administrar</span>
+
+    </a>
+
+ 
+
+    <div class="user">
+
+      <div class="avatar">
+        U
+      </div>
+
+      <span>
+        Jenko
+      </span>
+
+    </div>
+
+  </div>
+
+</header>

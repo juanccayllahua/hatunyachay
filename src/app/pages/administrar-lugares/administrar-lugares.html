@@ -1,0 +1,274 @@
+<div class="admin-page">
+
+  <header class="admin-header">
+
+    <div>
+      <span class="eyebrow">
+        ADMINISTRACIÓN
+      </span>
+
+      <h1>
+        Lugares turísticos
+      </h1>
+
+      <p>
+        Gestiona los lugares culturales y turísticos de Ayaviri.
+      </p>
+    </div>
+
+    <button
+      class="primary-button"
+      (click)="nuevo()">
+
+      + Nuevo lugar
+
+    </button>
+
+  </header>
+
+
+  <div class="admin-content">
+
+
+    <!-- LISTA -->
+
+    <section class="places-panel">
+
+      <div class="panel-header">
+
+        <div class="panel-title">
+
+          <h2>
+            Lugares registrados
+          </h2>
+
+          <span>
+            {{ (lugares$ | async)?.length ?? 0 }}
+          </span>
+
+        </div>
+
+        <div class="data-actions">
+
+          <button
+            type="button"
+            class="delete-button"
+            (click)="limpiarLocalStorage()">
+            🗑 Limpiar datos
+          </button>
+
+          <button
+            type="button"
+            class="secondary-button"
+            (click)="cargarDesdeJSON()">
+            ↑ Cargar datos
+          </button>
+
+          <button
+            type="button"
+            class="download-button"
+            (click)="exportarJSON()">
+            ↓ Descargar JSON
+          </button>
+
+        </div>
+
+      </div>
+
+      <div class="places-list">
+
+        @for (lugar of (lugares$ | async) ?? []; track lugar.id) {
+
+          <article class="place-item">
+
+            <div class="place-icon">
+              📍
+            </div>
+
+            <div class="place-info">
+
+              <span class="category">
+                {{ lugar.categoria }}
+              </span>
+
+              <h3>
+                {{ lugar.nombre }}
+              </h3>
+
+              <p>
+                {{ lugar.descripcion }}
+              </p>
+
+              <small>
+                {{ lugar.lat }}, {{ lugar.lng }}
+              </small>
+
+            </div>
+
+            <div class="place-actions">
+
+              <button
+                class="edit-button"
+                (click)="editar(lugar)">
+                Editar
+              </button>
+
+              <button
+                class="delete-button"
+                (click)="eliminar(lugar)">
+                Eliminar
+              </button>
+
+            </div>
+
+          </article>
+
+        }
+
+      </div>
+
+    </section>
+
+  </div>
+
+
+  <!-- MODAL: FORMULARIO -->
+
+  @if (mostrarFormulario) {
+
+    <div class="modal-overlay" (click)="cancelar()">
+
+      <section class="form-panel" (click)="$event.stopPropagation()">
+
+        <div class="panel-header">
+
+          <h2>
+            {{ editando ? 'Editar lugar' : 'Nuevo lugar' }}
+          </h2>
+
+          <button
+            type="button"
+            class="modal-close"
+            (click)="cancelar()">
+            ✕
+          </button>
+
+        </div>
+
+
+        <form
+          #form="ngForm"
+          (ngSubmit)="guardar()">
+
+
+          <div class="form-group">
+
+            <label>
+              Nombre
+            </label>
+
+            <input
+              type="text"
+              name="nombre"
+              [(ngModel)]="lugarActual.nombre"
+              placeholder="Ej. Iglesia San Juan Bautista"
+              required>
+
+          </div>
+
+
+          <div class="form-group">
+
+            <label>
+              Categoría
+            </label>
+
+            <input
+              type="text"
+              name="categoria"
+              [(ngModel)]="lugarActual.categoria"
+              placeholder="Ej. Patrimonio"
+              required>
+
+          </div>
+
+
+          <div class="form-group">
+
+            <label>
+              Descripción
+            </label>
+
+            <textarea
+              name="descripcion"
+              [(ngModel)]="lugarActual.descripcion"
+              rows="5"
+              placeholder="Describe este lugar...">
+            </textarea>
+
+          </div>
+
+          <div class="form-group">
+
+            <label>
+              Ubicación
+            </label>
+
+            <div id="admin-map"></div>
+
+          </div>
+
+          <div class="coordinates">
+
+            <div class="form-group">
+              <label>Latitud</label>
+              <input
+                type="number"
+                name="lat"
+                [(ngModel)]="lugarActual.lat"
+                step="any">
+            </div>
+
+            <div class="form-group">
+              <label>Longitud</label>
+              <input
+                type="number"
+                name="lng"
+                [(ngModel)]="lugarActual.lng"
+                step="any">
+            </div>
+
+          </div>
+
+
+          <div class="form-actions">
+
+            <button
+              type="button"
+              class="cancel-button"
+              (click)="cancelar()">
+
+              Cancelar
+
+            </button>
+
+            <button
+              type="submit"
+              class="primary-button"
+              [disabled]="form.invalid">
+
+              {{ editando ? 'Guardar cambios' : 'Crear lugar' }}
+
+            </button>
+
+          </div>
+
+        </form>
+
+      </section>
+
+    </div>
+
+  }
+
+</div>

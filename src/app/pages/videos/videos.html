@@ -1,0 +1,55 @@
+<div class="videos-page">
+
+  
+
+
+  <div class="video-grid">
+
+    @for (video of videos; track video.id) {
+      <article
+        class="video-card"
+        [class.featured]="video.featured"
+      >
+
+        <div class="video-image">
+
+          @if (videoReproduciendoId !== video.id) {
+            <img
+              [src]="video.miniatura"
+              [alt]="video.titulo"
+            >
+          } @else {
+            <video
+              [src]="video.archivo"
+              controls
+              autoplay
+              (ended)="detener(video.id)"
+            ></video>
+          }
+
+          @if (videoReproduciendoId !== video.id) {
+            <button
+              class="play"
+              (click)="reproducir(video.id)"
+            >
+              ▶
+            </button>
+
+            <span class="duration">
+              {{ video.duracion }}
+            </span>
+
+            <div class="video-info">
+              <span>{{ video.categoria }}</span>
+              <h2>{{ video.titulo }}</h2>
+            </div>
+          }
+
+        </div>
+
+      </article>
+    }
+
+  </div>
+
+</div>

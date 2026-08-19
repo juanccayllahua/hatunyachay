@@ -1,0 +1,199 @@
+.navbar {
+  height: 70px;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 28px;
+
+  box-sizing: border-box;
+
+  background: #1d2a2f;
+  color: white;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+
+/* MARCA */
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand-icon {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #123b5d;
+
+  border-radius: 10px;
+
+  font-size: 21px;
+}
+.brand-text{
+  display: flex;
+  flex-direction: column;
+  
+  /* align-items: center; */
+  /* align-content: center; */
+}
+.brand-text h1 {
+  margin: 0;
+
+
+  font-size: 18px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+.brand-text a {
+   color: #146cdf;
+   text-decoration: none;
+}
+
+.brand-text span {
+  display: block;
+
+  margin-top: 2px;
+
+  font-size: 11px;
+
+  color: #bfc8c8;
+}
+
+
+/* MENÚ */
+
+.main-nav {
+  display: flex;
+  align-items: center;
+
+  gap: 6px;
+
+  margin-left: 45px;
+}
+
+.main-nav a {
+  padding: 9px 13px;
+
+  border-radius: 7px;
+
+  color: #bfc8c8;
+
+  text-decoration: none;
+
+  font-size: 13px;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.main-nav a:hover {
+  background: rgba(255,255,255,0.06);
+  color: white;
+}
+
+.main-nav a.active {
+  color: white;
+  background: rgba(255,255,255,0.08);
+}
+
+
+/* ACCIONES */
+
+.navbar-actions {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  margin-left: auto;
+}
+
+
+/* ADMINISTRAR */
+
+.admin-button {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  padding: 9px 13px;
+
+  border-radius: 7px;
+
+  background: #123b5d;
+
+  color: white;
+
+  text-decoration: none;
+
+  font-size: 12px;
+}
+
+.admin-button:hover {
+  background: #174b73;
+}
+
+
+/* NOTIFICACIONES */
+
+.notification-button {
+  width: 40px;
+  height: 40px;
+
+  border: none;
+  border-radius: 9px;
+
+  background: rgba(255,255,255,0.06);
+
+  color: white;
+
+  cursor: pointer;
+}
+
+
+/* USUARIO */
+
+.user {
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+
+  padding-left: 8px;
+
+  font-size: 13px;
+}
+
+.avatar {
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #146cdf;
+
+  color: white;
+
+  font-weight: 600;
+}
+
+.main-nav a.active {
+  color: #ffffff;
+  background: #0869d7;
+  font-weight: 700;
+}

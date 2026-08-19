@@ -1,0 +1,558 @@
+.admin-page {
+    min-height: 100%;
+    padding: 32px;
+    box-sizing: border-box;
+    background: #3d3d3d;
+  }
+  
+  
+  /* HEADER */
+  
+  .admin-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+  
+    margin-bottom: 28px;
+  }
+  
+  .eyebrow {
+    display: block;
+  
+    margin-bottom: 6px;
+  
+    color: #fcfcfc;
+  
+    font-size: 11px;
+    font-weight: 700;
+  
+    letter-spacing: 1.5px;
+  }
+  
+  .admin-header h1 {
+    margin: 0;
+  
+    color: #ffffff;
+  
+    font-size: 28px;
+    font-weight: 700;
+  }
+  
+  .admin-header p {
+    margin: 7px 0 0;
+  
+    color: #ffffff;
+  
+    font-size: 13px;
+  }
+  
+  
+  /* CONTENIDO */
+  
+  .admin-content {
+    display: grid;
+  
+    /* grid-template-columns: minmax(0, 1.4fr) minmax(320px, 0.8fr); */
+  
+    gap: 22px;
+  
+    align-items: start;
+  }
+  
+  
+  /* PANELES */
+  
+  .places-panel,
+  .form-panel {
+    background: #141414;
+  
+    border: 1px solid #0ab0d1ea;
+  
+    border-radius: 12px;
+  
+    box-shadow: 0 3px 12px rgba(20, 40, 50, 0.04);
+  
+    overflow: hidden;
+  }
+  
+  .panel-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  
+    padding: 20px 22px;
+  
+    border-bottom: 1px solid #edf0f1;
+  }
+  
+  .panel-header h2 {
+    margin: 0;
+  
+    color: #c9c9c9;
+  
+    font-size: 16px;
+  }
+  
+  .panel-header span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    min-width: 26px;
+    height: 26px;
+  
+    padding: 0 7px;
+  
+    border-radius: 20px;
+  
+    background: #1d1d1d;
+  
+    color: #d1d1d1;
+  
+    font-size: 11px;
+    font-weight: 700;
+  }
+  
+  
+  /* LUGARES */
+  
+  .places-list {
+    padding: 8px;
+  }
+  
+  .place-item {
+    display: flex;
+    align-items: flex-start;
+  
+    gap: 14px;
+  
+    padding: 16px;
+  
+    border-bottom: 1px solid #edf0f1;
+  }
+  
+  .place-item:last-child {
+    border-bottom: none;
+  }
+  
+  .place-icon {
+    width: 42px;
+    height: 42px;
+  
+    flex-shrink: 0;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    border-radius: 9px;
+  
+    background: #eef3f6;
+  
+    font-size: 18px;
+  }
+  
+  .place-info {
+    flex: 1;
+    min-width: 0;
+  }
+  
+  .category {
+    font-size: 10px;
+    font-weight: 700;
+  
+    color: #f5f5f5;
+  
+    text-transform: uppercase;
+  
+    letter-spacing: 1px;
+  }
+  
+  .place-info h3 {
+    margin: 4px 0;
+  
+    color: #ffffff;
+  
+    font-size: 14px;
+  }
+  
+  .place-info p {
+    margin: 0 0 7px;
+  
+    color: #788587;
+  
+    font-size: 12px;
+  
+    line-height: 1.5;
+  }
+  
+  .place-info small {
+    color: #9aa5a7;
+  
+    font-size: 10px;
+  }
+  
+  
+  /* ACCIONES */
+  
+  .place-actions {
+    display: flex;
+    flex-direction: column;
+  
+    gap: 6px;
+  }
+  
+  .place-actions button {
+    border: none;
+  
+    padding: 7px 10px;
+  
+    border-radius: 6px;
+  
+    cursor: pointer;
+  
+    font-size: 11px;
+  }
+  
+  .edit-button {
+    background: #eef3f6;
+    color: #123b5d;
+  }
+  .delete-button {
+    background: rgba(220, 80, 80, 0.12);
+    color: #ff8585;
+    border: 1px solid rgba(255, 120, 120, 0.25);
+    border-radius: 8px;
+    padding: 8px 14px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .delete-button:hover {
+    background: #c94c4c;
+    color: #ffffff;
+    border-color: #c94c4c;
+    box-shadow: 0 4px 12px rgba(201, 76, 76, 0.25);
+  }
+  
+  .delete-button:active {
+    transform: scale(0.97);
+  }
+  
+  .delete-button:focus-visible {
+    outline: 3px solid rgba(255, 133, 133, 0.25);
+    outline-offset: 2px;
+  }
+  
+  .delete-button:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+    box-shadow: none;
+  }
+
+  .secondary-button {
+    background: #252a31;
+    color: #d7dce2;
+    border: 1px solid #3a414b;
+    border-radius: 8px;
+    padding: 8px 14px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: all 0.2s ease;
+  }
+  
+  .secondary-button:hover {
+    background: #303740;
+    color: #ffffff;
+    border-color: #59636f;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  }
+  
+  .secondary-button:active {
+    transform: translateY(1px);
+  }
+  
+  .secondary-button:focus-visible {
+    outline: 3px solid rgba(148, 163, 184, 0.25);
+    outline-offset: 2px;
+  }
+  
+  .secondary-button:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+    box-shadow: none;
+  }
+
+  .download-button {
+    background: rgba(74, 144, 226, 0.12);
+    color: #72b7ff;
+    border: 1px solid rgba(114, 183, 255, 0.25);
+    border-radius: 8px;
+    padding: 8px 14px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: all 0.2s ease;
+  }
+  
+  .download-button:hover {
+    background: #327ac7;
+    color: #ffffff;
+    border-color: #327ac7;
+    box-shadow: 0 4px 12px rgba(50, 122, 199, 0.25);
+  }
+  
+  .download-button:active {
+    transform: translateY(1px);
+  }
+  
+  .download-button:focus-visible {
+    outline: 3px solid rgba(114, 183, 255, 0.25);
+    outline-offset: 2px;
+  }
+  
+  .download-button:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+    box-shadow: none;
+  }
+
+  .edit-button {
+    background: rgba(245, 180, 60, 0.10);
+    color: #f5c76a;
+    border: 1px solid rgba(245, 180, 60, 0.25);
+    border-radius: 8px;
+    padding: 8px 14px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+  
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  
+    transition: all 0.2s ease;
+  }
+  
+  .edit-button:hover {
+    background: #c9952e;
+    color: #ffffff;
+    border-color: #c9952e;
+    box-shadow: 0 4px 12px rgba(201, 149, 46, 0.25);
+  }
+  
+  .edit-button:active {
+    transform: translateY(1px);
+  }
+  
+  .edit-button:focus-visible {
+    outline: 3px solid rgba(245, 199, 106, 0.25);
+    outline-offset: 2px;
+  }
+  
+  .edit-button:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+    box-shadow: none;
+  }
+  
+  
+  /* FORMULARIO */
+  
+  .form-panel {
+    padding-bottom: 20px;
+  }
+  
+  .form-panel form {
+    padding: 20px 22px;
+  }
+  
+  .form-group {
+    margin-bottom: 17px;
+  }
+  
+  .form-group label {
+    display: block;
+  
+    margin-bottom: 7px;
+  
+    color: #cfcfcf;
+  
+    font-size: 11px;
+    font-weight: 700;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+  
+    box-sizing: border-box;
+  
+    padding: 10px 11px;
+  
+    border: 1px solid #dce2e3;
+  
+    border-radius: 7px;
+  
+    outline: none;
+  
+    background: #141414;
+  
+    color: #cfcfcf;
+  
+    font-family: inherit;
+  
+    font-size: 12px;
+  
+    transition: border-color 0.2s;
+  }
+  
+  .form-group textarea {
+    resize: vertical;
+  }
+  
+  .form-group input:focus,
+  .form-group textarea:focus {
+    border-color: #123b5d;
+  }
+  
+  
+  /* COORDENADAS */
+  
+  .coordinates {
+    display: grid;
+  
+    grid-template-columns: 1fr 1fr;
+  
+    gap: 12px;
+  }
+  
+  
+  /* BOTONES */
+  
+  .form-actions {
+    display: flex;
+    justify-content: flex-end; 
+    gap: 8px; 
+    padding-top: 8px;
+  }
+  
+  .primary-button,
+  .cancel-button {
+    border: none;
+  
+    padding: 10px 15px;
+  
+    border-radius: 7px;
+  
+    cursor: pointer;
+  
+    font-size: 12px;
+    font-weight: 600;
+  }
+  
+  .primary-button {
+    background: #123b5d;
+    color: white;
+  }
+  
+  .primary-button:hover {
+    background: #174b73;
+  }
+  
+  .cancel-button {
+    background: #edf0f1;
+    color: #526064;
+  }
+
+  #admin-map {
+    width: 100%;
+    height: 280px;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #dce2e3;
+  }
+
+  /* =========================================================
+   MODAL — FORMULARIO
+   ========================================================= */
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 24px;
+  box-sizing: border-box;
+
+  background: rgba(0, 0, 0, 0.65);
+
+  backdrop-filter: blur(3px);
+
+  animation: overlay-fade .2s ease;
+}
+
+@keyframes overlay-fade {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.modal-overlay .form-panel {
+  width: min(700px, 100%);    
+  max-height: 90vh;
+
+  overflow-y: auto;
+
+  animation: modal-in .25s ease;
+}
+
+@keyframes modal-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+
+/* Botón cerrar (✕) */
+
+.modal-close {
+  border: none;
+  background: transparent;
+
+  color: #9aa5a7;
+
+  font-size: 16px;
+  line-height: 1;
+  cursor: pointer;
+
+  padding: 4px 8px;
+  border-radius: 6px;
+
+  transition: background .2s ease, color .2s ease;
+}
+
+.modal-close:hover {
+  background: #1d1d1d;
+  color: #ffffff;
+}

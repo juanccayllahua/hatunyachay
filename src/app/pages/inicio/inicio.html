@@ -1,0 +1,102 @@
+<div class="containermappage">
+  <aside class="sidebar">
+
+    @if (lugarSeleccionado$ | async; as lugar) {
+
+    <div class="detalle-lugar">
+      <div class="btn-volver" (click)="cerrarDetalle()">
+        ← Volver
+      </div>
+      <div class="detalle-imagen">
+        <img [src]="lugar.imagen" [alt]="lugar.nombre">
+
+      </div>
+
+      <div class="detalle-contenido">
+        <span class="detalle-categoria">
+          {{ lugar.categoria }}
+        </span>
+
+        <h2>{{ lugar.nombre }}</h2>
+
+
+        <!-- AUDIO -->
+        @if (lugar.audio) {
+          <div class="audio-player">
+      
+            <button
+              class="audio-btn"
+              (click)="toggleAudio(lugar.audio!)">
+              <span>{{ reproduciendoAudio ? '⏸' : '▶' }}</span>
+              {{ reproduciendoAudio ? 'Pausar' : 'Escuchar descripción' }}
+            </button>
+      
+            <div class="audio-progress">
+              <div
+                class="audio-progress-bar"
+                [style.width.%]="progresoAudio">
+              </div>
+            </div>
+      
+          </div>
+      
+          <audio
+            #audioPlayer
+            [src]="lugar.audio"
+            (timeupdate)="actualizarProgreso($event)"
+            (ended)="finalizarAudio()">
+          </audio>
+        }
+        <p>{{ lugar.descripcion }}</p>
+
+
+      </div>
+
+    </div>
+
+    } @else {
+
+    <div class="lista-lugares">
+
+      @for (lugar of (lugares$ | async) ?? []; track lugar.id) {
+
+      <div class="place-card" (click)="seleccionarLugar(lugar)">
+
+        <div class="place-card-image">
+          <img [src]="lugar.imagen" [alt]="lugar.nombre">
+        </div>
+
+        <div class="place-card-content">
+          <h3>{{ lugar.nombre }}</h3>
+          <span class="place-category">
+            {{ lugar.categoria }}
+          </span>
+        </div>
+
+        <div class="place-arrow">
+          ›
+        </div>
+
+      </div>
+
+      }
+
+    </div>
+
+    }
+
+  </aside>
+  <div class="home">
+    <div class="map-container">
+      <div id="map"></div>
+      <!-- <div class="map-search"> <span>⌕</span> <input type="text" placeholder="Buscar un lugar..." > </div> -->
+      <div class="map-title"> <span>AYAVIRI</span>
+        <h1>Descubre nuestra cultura</h1>
+        <p> Explora lugares, historias y tradiciones directamente en el mapa. </p>
+      </div>
+      <!-- <div class="map-filters"> <button>Todos</button> <button>📍 Lugares</button> <button>🏛 Patrimonio</button>
+        <button>🌄 Naturaleza</button> <button>🎭 Cultura</button>
+      </div> -->
+    </div>
+  </div>
+</div>

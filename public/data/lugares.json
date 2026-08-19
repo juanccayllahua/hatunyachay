@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "nombre": "Iglesia San Francisco de Asis.",
+    "categoria": "Patrimonio",
+    "descripcion": "El Templo de San Francisco de Asís de Ayaviri es una joya de la arquitectura colonial y del barroco andino, con más de 300 años de historia. Fue construido sobre antiguas bases incas y destaca por su magnífica portada, sus retablos y sus grandes lienzos del siglo XVIII, obra del artista indígena Isidoro Francisco de Moncada. En su interior conserva un impresionante altar mayor con un frontal de plata repujada. Restaurado integralmente en 2017, hoy es uno de los principales atractivos culturales de Ayaviri y un símbolo de su historia y tradición religiosa.    ",
+    "lat": -14.88,
+    "lng": -70.59,
+    "imagen": "templosanfrancisco.jpeg",
+    "audio":"audio/sanfrancisco.mp3"
+  },
+  {
+    "id": 1786964680037,
+    "nombre": "Kolqueparque",
+    "categoria": "Naturaleza",
+    "descripcion": "El Cerro Kolqueparque se encuentra al este de Ayaviri y es uno de sus principales miradores naturales. Desde su cima se puede apreciar la ciudad y disfrutar de impresionantes atardeceres. Además de su valor paisajístico, es un antiguo centro ceremonial donde se realizaban ofrendas a la Pachamama. El cerro también está vinculado a la devoción por la Virgen de la Candelaria, cuya festividad se celebra cada 24 de enero con danzas, música, altares y actividades tradicionales. Sus senderos, cruces y capillas convierten a Kolqueparque en un lugar donde naturaleza, historia y tradición se unen.\n",
+    "lat": -14.881066421088462,
+    "lng": -70.58134317398073,
+    "imagen": "kolqueparquev1.jpeg",
+    "audio":"audio/kolqueparque.mp3"
+  },
+  {
+    "id": 1786968135883,
+    "nombre": "Tinajani",
+    "categoria": "Naturaleza",
+    "descripcion": "El Cañón de Tinajani se encuentra a 14 kilómetros al sur de Ayaviri, a 3,960 metros sobre el nivel del mar, y comprende aproximadamente 250 hectáreas. Destaca por sus impresionantes formaciones rocosas rojizas, originadas por procesos geológicos de millones de años. Su paisaje combina planicies, montañas y farallones que lo convierten en un lugar ideal para el turismo, la investigación y la educación geológica. Además, Tinajani es conocido por su tradicional Festival de Danzas, realizado desde 1994, donde las expresiones culturales tienen como escenario sus majestuosos farallones.    ",
+    "lat": -15.001159,
+    "lng": -70.5837669,
+    "imagen": "tinajani.png",
+    "audio":"audio/tinajani.mp3"
+  }
+]
