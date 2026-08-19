@@ -1,78 +1,111 @@
-<main class="principal">
+<section class="hero">
 
-    <!-- HERO -->
-    <section class="hero">
-  
-      <div class="hero-content">
-  
-        <span class="eyebrow">✦ DESCUBRE HATUN YACHAY</span>
-  
-        <h1>
-          Aprende y conoce
-          <span>lugares increíbles cerca de ti</span>
-        </h1>
-  
-        <p>
-          Explora destinos únicos, descubre nuevas experiencias
-          y crea recuerdos que durarán para siempre.
-        </p>
-  
-        <div class="hero-buttons">
-          <button class="btn-primary">
-            Explorar destinos
-            <span>→</span>
-          </button>
-  
-          <button class="btn-secondary" >
-            Ver experiencias
-          </button>
-        </div>
-  
-         
-  
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+
+  <div class="hero-container">
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <div class="hero-content">
+
+      <span class="hero-tag">
+        CULTURA · EDUCACIÓN · HISTORIA
+      </span>
+
+      <h1>
+        Conoce.
+        <span>Aprende.</span>
+        Descubre.
+      </h1>
+
+      <p>
+        Explora la historia, cultura, tradiciones y lugares que
+        forman parte de la identidad de nuestro pueblo.
+      </p>
+
+      <div class="hero-actions">
+
+        <button class="btn-primary" routerLink="/inicio">
+          Explorar cultura
+          <span>→</span>
+        </button>
+
+        <button class="btn-secondary" routerLink="/videos">
+          📖 Aprender más
+        </button>
+
       </div>
-  
-  
-      <!-- IMAGEN -->
-      <div class="hero-visual">
-  
-        <div class="image-container">
-          <img
-            src="tinajani.jpg"
-            alt="Destino turístico"
-          />
+
+    </div>
+
+
+    <!-- TARJETAS -->
+    <div class="places">
+
+      <div class="place-card">
+
+        <div class="place-icon history">
+          🏛
         </div>
-  
-        <!-- Tarjeta sobre la imagen -->
-        <div class="destination-card">
-  
-          <div class="destination-top">
-            <div class="location-icon">
-              📍
-            </div>
-  
-            <div>
-              <small>DESTINO DESTACADO</small>
-              <h3>Tinajani</h3>
-            </div>
-          </div>
-   
-  
-          <p>
-            Naturaleza, aventura y paisajes
-            que no olvidarás.
-          </p>
-  
-          <button >
-            Descubrir destino →
-          </button>
-  
+
+        <div>
+          <small>HISTORIA</small>
+          <h3>Nuestro origen</h3>
+          <p>Conoce cómo nació nuestra comunidad</p>
         </div>
-  
+
       </div>
-  
-    </section>
-  
-   
-  
-  </main>
+
+
+      <div class="place-card">
+
+        <div class="place-icon culture">
+          🎭
+        </div>
+
+        <div>
+          <small>CULTURA</small>
+          <h3>Tradiciones</h3>
+          <p>Costumbres que nos representan</p>
+        </div>
+
+      </div>
+
+
+
+    </div>
+
+  </div>
+
+
+  <!-- CONTENIDO EDUCATIVO DESTACADO -->
+  <div class="featured-content">
+
+    <div class="featured-image">
+      <img src="tinajani.png" alt="Cultura local">
+    </div>
+
+    <div class="featured-info">
+
+      <span class="featured-category">
+        CONTENIDO DESTACADO
+      </span>
+
+      <h3>
+        Historia y cultura de Hatun Yachay
+      </h3>
+
+      <p>
+        Aprende sobre nuestras raíces, personajes,
+        costumbres y patrimonio cultural.
+      </p>
+
+      <button class="featured-button">
+        Ver contenido →
+      </button>
+
+    </div>
+
+  </div>
+
+</section>

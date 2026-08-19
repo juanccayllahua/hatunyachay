@@ -9,3 +9,28 @@ html,
 body {
   font-family: 'Poppins', sans-serif;
 }
+
+.leaflet-popup-content-wrapper {
+  background: #1b3342;   /* el color que quieras */
+  color: #ffffff;         /* color del texto */
+  border-radius: 8px;
+}
+
+.leaflet-popup-tip {
+  background: #1b3342;   /* la puntita triangular debe ser del mismo color */
+}
+
+.leaflet-popup-close-button {
+  color: #ffffff;        /* color del símbolo "×" */
+  font-size: 20px;       /* tamaño del ícono */
+  top: 8px;
+  right: 8px;
+}
+.leaflet-popup-close-button {
+  background: rgba(255,255,255,0.2);
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  text-align: center;
+}

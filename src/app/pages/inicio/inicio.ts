@@ -132,6 +132,7 @@ export class Inicio implements AfterViewInit {
 
           marker.bindPopup(`
           <div style="
+          
             min-width: 160px;
             padding: 4px;
             font-family: Arial, sans-serif;
@@ -141,7 +142,7 @@ export class Inicio implements AfterViewInit {
               display: block;
               font-size: 15px;
               margin-bottom: 4px;
-              color: #222;
+              color: white;
             ">
               ${lugar.nombre}
             </strong>
@@ -149,7 +150,7 @@ export class Inicio implements AfterViewInit {
             <span style="
               display: block;
               font-size: 12px;
-              color: #777;
+              color: #ccc;
               margin-bottom: 8px;
             ">
               ${lugar.categoria}
@@ -164,8 +165,8 @@ export class Inicio implements AfterViewInit {
                 padding: 5px 8px;
                 border: 1px solid #ddd;
                 border-radius: 5px;
-                background: #f7f7f7;
-                color: #555;
+                background: #376e9e;
+                color: #fff;
                 font-size: 11px;
                 text-decoration: none;
               "
